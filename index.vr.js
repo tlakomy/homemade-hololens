@@ -84,7 +84,20 @@ class CubeSample extends React.Component {
   render() {
     return (
       <View>
-        <LiveEnvCamera />
+        <Text
+          style={{
+            backgroundColor: '#1C77B9',
+            fontSize: 0.8,
+            fontWeight: '400',
+            layoutOrigin: [0.5, 0.5],
+            paddingLeft: 0.2,
+            paddingRight: 0.2,
+            textAlign: 'center',
+            textAlignVertical: 'center',
+            transform: [{translate: [0, 0, -3]}],
+          }}>
+          Hello Minsk!
+        </Text>
         <TestDom />
       </View>
     );

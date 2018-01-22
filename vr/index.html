@@ -1,7 +1,19 @@
 <html>
   <head>
     <title>hololens</title>
-    <style>body { margin: 0; }</style>
+    <style>
+      body { 
+        margin: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+      #arjsDebugUIContainer {
+        display: none !important;
+      }
+      a-scene {
+        display: none !important;
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
@@ -22,3 +34,17 @@
   </body>
 </html>
 
+
+<!-- Prod version:
+
+<script src="./build/client.bundle.js"></script>
+    <script>
+      // Initialize the React VR application
+      ReactVR.init(
+        // When you're ready to deploy your app, update this line to point to
+        // your compiled index.bundle.js
+        './build/index.bundle.js',
+        // Attach it to the body tag
+        document.body
+      );
+    </script> -->

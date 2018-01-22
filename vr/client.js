@@ -58,6 +58,8 @@ class RCTTestDom extends ReactVR.RCTBaseView {
     this.newContent = range.createContextualFragment(tagString);
 
     document.body.appendChild(this.newContent);
+
+    this.view.add(document.querySelector('a-scene').object3D);
   }
 
   discard() {
