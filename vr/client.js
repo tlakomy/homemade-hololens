@@ -44,8 +44,20 @@ class RCTTestDom extends ReactVR.RCTBaseView {
   constructor(guiSys: GuiSys) {
     super();
     this.view = new OVRUI.UIView(guiSys);
-    this.newContent = document.createTextNode("Hi there and greetings!");
-    document.body.appendChild(this.newContent)
+    const tagString = `
+    <a-scene embedded arjs='trackingMethod: best;'>
+        <a-anchor hit-testing-enabled='true'>
+        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+        </a-anchor>
+      <a-camera-static/>
+    </a-scene>`;
+
+    const range = document.createRange();
+    // make the parent of the first div in the document becomes the context node
+    range.selectNode(document.getElementsByTagName("div").item(0));
+    this.newContent = range.createContextualFragment(tagString);
+
+    document.body.appendChild(this.newContent);
   }
 
   discard() {

@@ -23,7 +23,7 @@
  */
 
 import React from 'react';
-import {AppRegistry, asset, Pano, Text, View, VrButton, NativeModules} from 'react-vr';
+import {AppRegistry, asset, Pano, Text, View, VrButton, LiveEnvCamera, NativeModules} from 'react-vr';
 
 const NativeMethodsMixin = require('NativeMethodsMixin');
 const StyleSheetPropType = require('StyleSheetPropType');
@@ -83,14 +83,8 @@ class CubeSample extends React.Component {
 
   render() {
     return (
-      <View
-        style={{
-          transform: [{translate: [0, 0, -3]}],
-          layoutOrigin: [0.5, 0, 0],
-          alignItems: 'center',
-        }}
-      >
-        <Pano source={asset('chess-world.jpg')} />
+      <View>
+        <LiveEnvCamera />
         <TestDom />
       </View>
     );

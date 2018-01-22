@@ -3866,6 +3866,10 @@ react-vr@~2.0.0:
     create-react-class "^15.6.0"
     prop-types "^15.5.10"
 
+react-web-ar@1.0.0-beta2:
+  version "1.0.0-beta2"
+  resolved "https://registry.yarnpkg.com/react-web-ar/-/react-web-ar-1.0.0-beta2.tgz#a90317e163ff10c1d14a010d032fa2af6e8c1d2c"
+
 react@16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
