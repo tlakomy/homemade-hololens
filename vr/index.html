@@ -15,25 +15,38 @@
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+    <script src="./vendors/aframe.min.js"></script>
+    <script src="./vendors/aframe-ar.js"></script>
   </head>
   <body>
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
-    <script src="./build/client.bundle.js"></script>
+    <script src="./client.bundle?platform=vr"></script>
     <script>
       // Initialize the React VR application
       ReactVR.init(
         // When you're ready to deploy your app, update this line to point to
         // your compiled index.bundle.js
-        './build/index.bundle.js',
+        '../index.vr.bundle?platform=vr&dev=true',
         // Attach it to the body tag
         document.body
       );
-    </script> 
+    </script>
   </body>
 </html>
 
+<!-- Dev version:
+
+<script src="./client.bundle?platform=vr"></script>
+  <script>
+    // Initialize the React VR application
+    ReactVR.init(
+      // When you're ready to deploy your app, update this line to point to
+      // your compiled index.bundle.js
+      '../index.vr.bundle?platform=vr&dev=true',
+      // Attach it to the body tag
+      document.body
+    );
+  </script> -->
 
 <!-- Prod version:
 
