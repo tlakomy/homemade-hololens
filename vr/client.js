@@ -27,7 +27,7 @@ function merge(foo, bar) {
 
 
 class RCTTestDom extends ReactVR.RCTBaseView {
-  constructor(guiSys: GuiSys) {
+  constructor(guiSys) {
     super();
     this.view = new OVRUI.UIView(guiSys);
     const tagString = `

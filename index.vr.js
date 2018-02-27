@@ -54,6 +54,7 @@ class CubeSample extends React.Component {
   render() {
     return (
       <View>
+        <LiveEnvCamera />
         <TestDom />
       </View>
     );
